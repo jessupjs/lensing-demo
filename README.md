@@ -1,7 +1,10 @@
 ## Lensing :: Demo
 
 #### Setup
-1. Build with Webpack.
+1. Local Dev
+    + Setup: `npm install`
+    + Serve: `npm run start:dev`
+    + In browser: `http://localhost:9000`
 
 #### Notes
 
