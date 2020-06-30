@@ -1,8 +1,8 @@
 import './index.css';
 import * as osd from 'openseadragon';
-import * as l from 'lensing';
+//import * as l from 'lensing';
 // NPM link work around
-//import * as l from '../../lensing/src/index';
+import * as l from '../../lensing/src/index';
 
 // Image
 const target = 'viewer'
