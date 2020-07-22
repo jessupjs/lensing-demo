@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jessupjs/lensing-demo#readme",
   "dependencies": {
-    "lensing": "^1.0.6",
+    "lensing": "^1.0.8",
     "openseadragon": "^2.4.2"
   },
   "devDependencies": {
