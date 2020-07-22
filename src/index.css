@@ -27,7 +27,6 @@ header img {
 }
 
 #viewer {
-    background-color: rgba(0, 0, 0, 0.9);
     height: 600px;
     position: relative;
     width: 600px;
