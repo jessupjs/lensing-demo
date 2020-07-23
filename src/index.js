@@ -29,8 +29,9 @@ const viewer = osd(viewer_config);
 
 // Loading data colors
 const data = [];
-csv.forEach(c => {
+csv.forEach((c, i) => {
     data.push({
+        index: i,
         name: c[0] + '_' + c[1] + '_' + c[2],
         r: c[0],
         g: c[1],
