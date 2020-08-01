@@ -1,7 +1,7 @@
 {
   "name": "lensing-demo",
   "version": "1.0.0",
-  "description": "#### Notes",
+  "description": "A lens tooling plugin for OpenSeadragon",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

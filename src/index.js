@@ -27,20 +27,47 @@ const viewer_config = {
 // Instantiate viewer
 const viewer = osd(viewer_config);
 
-// Loading data colors
-const data = [];
-csv.forEach((c, i) => {
-    data.push({
-        index: i,
-        name: c[0] + '_' + c[1] + '_' + c[2],
-        r: c[0],
-        g: c[1],
-        b: c[2]
-    })
-});
-const data_config = {
-    type: 'color'
-}
+// Add open event
+viewer.addOnceHandler('open', proceed);
 
-// Instantiate Lensing
-viewer.lensing = l.construct(osd, viewer, viewer_config, data, data_config);
+function proceed(e) {
+
+    // Loading data colors
+    const data_colors = [];
+    csv.forEach((c, i) => {
+        data_colors.push({
+            index: i,
+            name: c[0] + '_' + c[1] + '_' + c[2],
+            r: +c[0],
+            g: +c[1],
+            b: +c[2]
+        })
+    });
+    const data_config = {
+        type: 'color'
+    }
+
+    // Loading data pos (emulation of csv import)
+    /* @fixme
+      data = [ [entry], ...] - CORRECT
+      data - [ [[x, y], ...], ...] - INCORRECT
+     */
+    /*
+    const data_pos = [];
+    const dims = viewer.source.dimensions;
+    console.log(dims)
+    for (let r = 0; r < dims.y; r++) {
+        const current = [];
+        data_pos.push(current)
+        for (let c = 0; c < dims.x; c++) {
+            // [id, x, y]
+            current.push([`${c}_${r}`, c, r]);
+        }
+    }
+    console.log(data_pos);
+    */
+
+    // Instantiate Lensing
+    viewer.lensing = l.construct(osd, viewer, viewer_config, data_colors, data_config);
+
+}

@@ -3,8 +3,12 @@
 #### Setup
 1. Local Dev
     + Setup: `npm install`
-    + Serve: `npm run start:dev`
+    + Serve: `npm run start-dev`
     + In browser: `http://localhost:9000`
+
+2. For now, w webpack need:
+    + `npm install -D babel-loader @babel/core @babel/preset-env`
+    + `npm install -D file-loader`
 
 #### Notes
 
