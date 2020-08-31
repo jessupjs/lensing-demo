@@ -47,6 +47,18 @@ function proceed(e) {
         type: 'color'
     }
 
+    // Config dataLoad1
+    const dataLoad1 = {
+        data: data_colors,
+        config: {
+            type: 'color-index',
+            filter: 'fil_data_rgb'
+        }
+    }
+
+    // Compile dataLoad
+    const dataLoad = [dataLoad1];
+
     // Loading data pos (emulation of csv import)
     /* @fixme
       data = [ [entry], ...] - CORRECT
@@ -68,6 +80,6 @@ function proceed(e) {
     */
 
     // Instantiate Lensing
-    viewer.lensing = l.construct(osd, viewer, viewer_config, data_colors, data_config);
+    viewer.lensing = l.construct(osd, viewer, viewer_config, dataLoad);
 
 }

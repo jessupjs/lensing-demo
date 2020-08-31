@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start-dev": "webpack-dev-server"
+    "dev-wp": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jessupjs/lensing-demo#readme",
   "dependencies": {
-    "lensing": "^1.0.12",
+    "lensing": "^1.0.15",
     "openseadragon": "^2.4.2"
   },
   "devDependencies": {
